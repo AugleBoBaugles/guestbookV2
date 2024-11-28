@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Entries</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="tableContainer">
+        <a href="/">Back to Form</a>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>LinkedIn</th>
+                    <th>Email</th>
+                    <th>How We Met</th>
+                    <th>Other</th>
+                    <th>Message</th>
+                    <th>Mailing List?</th>
+                    <th>Mailing Format</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(entry => { %>
+                    <tr>
+                        <td><%= entry.fname %> <%= entry.lname %></td>
+                        <td><%= entry.job %></td>
+                        <td><%= entry.company %></td>
+                        <td><%= entry.linkedIn %></td>
+                        <td><%= entry.email %></td>
+                        <td><%= entry.howWeMet %></td>
+                        <td><%= entry.howWeMetOther %></td>
+                        <td><%= entry.message %></td>
+                        <td><%= entry.mailingList %></td>
+                        <td><%= entry.format %></td>
+                        <td><%= entry.timestamp %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+</html>

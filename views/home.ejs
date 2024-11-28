@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuestBook</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico?"> 
+    <!-- added a ? at the end of the favicon path to force the browser to request it (https://stackoverflow.com/questions/4248343/why-my-favicon-not-showing-up-although-it-is-defined-correctly) -->
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    
+</head>
+<body>
+    <div class="main">
+        <form id="contact-form" method="post" action="confirm">
+            <div class="container">
+                <h1 id="headingContainer">Contact Form</h1>
+
+                <label id="firstNameContainer">
+                    First Name
+                    <input type="text" id="fName" name="fname">
+                    <span id="firstName-err-req" class="err">Field is required</span>
+                </label>
+
+                <label id="lastNameContainer">
+                    Last Name
+                    <input type="text" id="lName" name="lname">
+                    <span id="lastName-err-req" class="err">Field is required</span>
+                </label>
+
+                <label id="jobTitleContainer">
+                    Job Title
+                    <input type="text" id="jobTitle" name="job">
+                </label>
+
+                <label id="companyContainer">
+                    Company
+                    <input type="text" id="company" name="company">
+                </label>
+
+                <label id="linkedInContainer">
+                    LinkedIn URL
+                    <input type="text" id="linkedIn" name="linkedIn">
+                    <span id="linkedIn-err-format" class="err">Must start with https://www.linkedin.com/in/</span>
+                </label>
+
+                <label id="emailContainer">
+                    Email Address
+                    <input type="text" id="email" name="email">
+                    <span id="email-err-req" class="err">Field is required</span>
+                    <span id="email-err-format" class="err">Email must be correct format</span>
+                </label>
+
+                <label id="selectMeetContainer">
+                    How did we meet?
+                    <select id="meet" name="howWeMet">
+                        <option value="none">--Please Select--</optino>
+                        <option value="meetup">Meetup</option>
+                        <option value="jobFair">Job Fair</option>
+                        <option value="school">School</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="meet-err-req" class="err">Field is required</span>
+                </label>
+
+                <label id="textMeetContainer">
+                    Other (please specify)
+                    <input type="text" id="met" name="howWeMetOther">
+                </label>
+            </div>
+
+            
+            <label id="message">
+                Message
+                <textarea name="message"></textarea>
+            </label>
+            <br>
+
+            <div id="mailingContainer">
+                <input type="checkbox" id="mailingList" name="mailingList" value="checked">
+                <label for="mailingList">Please add me to your mailing list</label>
+            </div>
+            
+            <br>
+
+            <label id="format">
+                Choose an email format: 
+                <input type="radio" id="html" name="format" value="html" checked>
+                <label for="html">HTML</label>
+                <input type="radio" id="text" name="format" value="text">
+                <label for="text">Text</label>
+            </label>
+            <br>
+
+            <button type="submit">Submit</button>
+            
+        </form>
+    </div>
+</body>
+</html>

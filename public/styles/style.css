@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: lightsalmon;
+}
+
+label {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=email], input[type=url], select {
+    width: 100%;
+    height: 30px;
+}
+
+
+.main{
+    width: 70%;
+    margin: 5rem auto;
+    padding: 10px;
+    background-color: rgb(255, 218, 207);
+    color: brown;
+    border-radius: 15px;
+}
+
+body h1 {
+    text-align: center;
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    margin: 5px 0;
+    height: 5rem;
+}
+
+#format {
+    margin: 5px 0;
+}
+
+button {
+    background-color: lightsalmon;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+a {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: white;
+    color: brown;
+}
+
+.container {
+    margin-bottom: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "heading    heading     heading     heading    heading     heading"
+        "firstName  firstName   lastName    lastName   jobTitle    jobTitle"
+        "company    company     linkedIn    linkedIn   email       email"
+        "selectMeet selectMeet  selectMeet  textMeet   textMeet    textMeet"
+}
+
+#headingContainer {
+    grid-area: heading;
+}
+#firstNameContainer {
+    grid-area: firstName;
+}
+#lastNameContainer {
+    grid-area: lastName;
+}
+#jobTitleContainer {
+    grid-area: jobTitle;
+}
+#companyContainer {
+    grid-area: company;
+}
+#linkedInContainer {
+    grid-area: linkedIn;
+}
+#emailContainer {
+    grid-area: email;
+}
+#selectMeetContainer {
+    grid-area: selectMeet;
+}
+#textMeetContainer {
+    grid-area: textMeet;
+}
+
+
+/* Validation */
+.err {
+    color: rgb(255, 0, 0);
+    display: none;
+}
+
+#format {
+    display: none;
+}
+
+#textMeetContainer {
+    display: none;
+}
+
+.tableContainer {
+    margin: 2%;
+}
+
+table {
+    background-color: rgb(255, 218, 207);
+    color:brown;
+    margin: 10px 0;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(255, 218, 207);
+}
+tr:nth-child(odd) {
+    background-color: rgb(239, 196, 183);
+}
